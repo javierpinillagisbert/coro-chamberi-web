@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.corochamberimaristas.es/sitemap.xml
+Sitemap: https://coro-chamberi-web.netlify.app/sitemap.xml

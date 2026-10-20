@@ -1,14 +1,13 @@
-# Coro Chamberí Maristas — prototipo completo
+# Coro Chamberí Maristas — web actualizada
 
-Este prototipo integra todos los contenidos y secciones públicas de la web histórica del coro: Inicio, Historia, Director, Componentes, Memorias, Galería, Actuaciones, Agenda, Admisiones, Himno, contenidos de música y bienestar, Humor y Contactos.
+Versión actualizada el 20 de octubre de 2026 a partir del contenido público de la web histórica del coro.
 
-## Abrir
+## Publicación
 
-Abre `index.html` en un navegador. Para que se carguen las 68 fotografías de la galería se necesita conexión a Internet, ya que se conservan mediante sus URLs públicas originales de WordPress.
+El sitio es estático (HTML/CSS/JS) y puede desplegarse directamente en Netlify o GitHub Pages. `index.html` debe permanecer en la raíz.
 
-## Importante
+## Actualizaciones de contenido
 
-- Las fechas de Agenda y Actuaciones son archivo histórico.
-- Los formularios son demostrativos.
-- Los textos sanitarios heredados se muestran con un aviso editorial y necesitan revisión antes de publicación.
-- Conviene confirmar la lista actual de componentes y los permisos de publicación de nombres e imágenes.
+Las secciones que cambian con mayor frecuencia son `agenda.html`, `actuaciones.html`, `memorias.html`, `voces.html` y `galeria.html`. El diseño compartido está en `assets/css/styles.css` y las interacciones en `assets/js/main.js`.
+
+Ver `ACTUALIZACION_OCTUBRE_2026.md` para el detalle de esta sincronización.
