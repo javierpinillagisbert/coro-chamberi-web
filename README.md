@@ -1,13 +1,26 @@
-# Coro Chamberí Maristas — web actualizada
+# Coro Chamberí Maristas — sitio web
 
-Versión actualizada el 20 de octubre de 2026 a partir del contenido público de la web histórica del coro.
+Sitio HTML/CSS/JS para publicación en Netlify.
 
-## Publicación
+## Despliegue
+- `index.html` y la carpeta `assets/` en la raíz de publicación.
+- En Netlify, activar **Forms → Form detection → Enable** y hacer un nuevo deploy.
+- Formularios estáticos: `contacto`, `unete`, `contratacion`.
+- Configurar email en **Forms → Submission notifications → Add notification → Email notification**; destino sugerido `coro@maristaschamberi.com`.
+- Realizar pruebas reales con un envío a cada formulario, verificar que aparecen en Forms y confirmar la recepción del correo.
+- La página `gracias.html` se muestra tras el POST, solo si Netlify procesó el envío.
+- En GitHub Pages los formularios **no se procesan**.
 
-El sitio es estático (HTML/CSS/JS) y puede desplegarse directamente en Netlify o GitHub Pages. `index.html` debe permanecer en la raíz.
+## Antes de publicar el dominio final
+- Confirmar el nombre legal y las obligaciones del responsable del tratamiento; revisar `privacidad.html` con el coro y adecuar al RGPD/LOPDGDD.
+- Confirmar consentimiento y derechos de publicación de fotografías, nombres e himno.
+- Las fotografías de galería todavía usan URL externas de WordPress: no eliminar ese sitio hasta descargarlas al proyecto.
+- Revisar agenda, integrantes, correo y otros datos públicos con la persona responsable del coro.
+- Al comprar el dominio, actualizar URLs canonical/og:url/JSON-LD, `robots.txt` y `sitemap.xml`.
+- Confirmar si el sitio de Netlify es `https://coro-chamberi-web.netlify.app/`: SEO usa esa dirección provisional hasta el cambio de dominio.
+- Opcional: retirar documentación interna (`*.md`) antes de desplegar.
 
-## Actualizaciones de contenido
-
-Las secciones que cambian con mayor frecuencia son `agenda.html`, `actuaciones.html`, `memorias.html`, `voces.html` y `galeria.html`. El diseño compartido está en `assets/css/styles.css` y las interacciones en `assets/js/main.js`.
-
-Ver `ACTUALIZACION_OCTUBRE_2026.md` para el detalle de esta sincronización.
+## Archivos
+- HTML en raíz.
+- Diseño `assets/css/styles.css` y scripts `assets/js/main.js`.
+- Multimedia `assets/images/`, `assets/audio/`.
