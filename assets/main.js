@@ -1,6 +1,32 @@
 (() => {
   const body = document.body;
   const page = body.dataset.page;
+  // Requiere un medio de contacto válido: correo o teléfono.
+  document.querySelectorAll('form[data-netlify="true"]').forEach(form => {
+    const email = form.querySelector('input[name="email"]');
+    const phone = form.querySelector('input[name="telefono"]');
+    if (!email || !phone) return;
+    const update = () => {
+      email.setCustomValidity('');
+      phone.setCustomValidity('');
+      const e = email.value.trim();
+      const p = phone.value.trim();
+      if (!e && !p) {
+        email.setCustomValidity('Indica un correo electrónico o un teléfono de contacto.');
+      } else if (p && !/^\+?[0-9() .-]{7,25}$/.test(p)) {
+        phone.setCustomValidity('Introduce un teléfono de contacto válido.');
+      } else if (p && (p.match(/\d/g) || []).length < 7) {
+        phone.setCustomValidity('Introduce al menos 7 dígitos en el teléfono.');
+      }
+    };
+    email.addEventListener('input', update);
+    phone.addEventListener('input', update);
+    form.addEventListener('submit', event => {
+      update();
+      if (!form.checkValidity()) {event.preventDefault();form.reportValidity();}
+    });
+  });
+
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.site-nav');
 
